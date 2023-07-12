@@ -1,0 +1,4 @@
+---
+name: azcli
+files:
+- azcli/azcli-*-linux-amd64

@@ -49,6 +49,7 @@ packages:
 - mysql
 - director-ruby-3.2
 - s3cli
+- azcli
 - davcli
 - bosh-gcscli
 - verify_multidigest
@@ -378,7 +379,7 @@ properties:
 
   # Blobstore
   blobstore.provider:
-    description: Provider of the blobstore used by director and agent (dav|simple|s3|gcs)
+    description: Provider of the blobstore used by director and agent (dav|simple|s3|gcs|az)
     default: 'dav'
   blobstore.s3_region:
     description: Region of the blobstore used by s3 blobstore plugin
@@ -435,6 +436,15 @@ properties:
     default: false
   blobstore.secret:
     description: Secret used for HMAC signature for pre-signed urls
+  blobstore.account_name:
+    description: account_name
+    default: 5fparpdv7ms7lukykpybog
+  blobstore.container_name:
+    description: account_name
+    default: blobstore
+  blobstore.account_key:
+    description: account_name
+    default: xS6T27XUyoUST0IffILjSzSzZa252Qs1eGXfgnwoO8PJMSyRc+iW8bb7C3VoubqUJjOiVQsXkEPG+AStUA1FXQ==
 
   director.ignore_missing_gateway:
     description: Allow gateway to be omitted from subnet configuration. Boshlite vms(containers) do not require gateway.
